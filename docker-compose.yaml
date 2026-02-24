@@ -6,9 +6,9 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - 8001:80
+      - 8002:80
     volumes:
-      - .:/var/www/html
+      - ./nacelle2025:/var/www/html
     environment:
       - APP_ENV=dev
     depends_on:
