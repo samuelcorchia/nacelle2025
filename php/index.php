@@ -10,7 +10,6 @@ use Banque\{
 require_once "classes/Autoloader.php";
 Autoloader::register();
 
-var_dump($_SERVER);
 echo "Bienvenue ouech Samuel";
 
 $oNewCompteClient = new CompteClient("paulette", "tenaud");
