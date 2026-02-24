@@ -6,11 +6,12 @@
  */
 namespace Database;
 use PDO;
+use PDOException;
 
 const DBHOST = 'db';
-const DBUSER = 'myuser';
-const DBPASS = 'mypassword';
-const DBNAME = 'mydatabase';
+const DBUSER = 'samuel.corchia';
+const DBPASS = 'Br6dd534';
+const DBNAME = 'monapp';
 
 class Db extends PDO
 {
