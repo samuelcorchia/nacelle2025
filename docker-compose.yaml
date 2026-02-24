@@ -16,7 +16,6 @@ services:
       APP_DATABASE: monapp
       APP_USER: samuel.corchia
       APP_PASSWORD: Br6dd534
-    working_dir: /var/www/html
     depends_on:
       - db
   db:
