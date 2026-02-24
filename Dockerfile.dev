@@ -8,4 +8,4 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 # ACtiver mod_rewrite
 RUN a2enmod rewrite
 
-WORKDIR ${DOCUMENT_ROOT}
+WORKDIR ${DOCUMENT_ROOT}/php
