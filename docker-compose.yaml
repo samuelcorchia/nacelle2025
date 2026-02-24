@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8001:80
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APP_ENV=dev
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootPass
+      MYSQL_DATABASE: monapp
+      MYSQL_USER: samuel.corchia
+      MYSQL_PASSWORD: Br6dd534
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: db
+    ports:
+      - 8081:80
+    depends_on:
+      - db
