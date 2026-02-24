@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-test sur branche feature/branche1
-=======
-test sur branche feature/NAC-3
-ajout ligne
->>>>>>> feature/NAC-3
+test test sam
+aa
+bb
+cc
