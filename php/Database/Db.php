@@ -9,9 +9,9 @@ use PDO;
 use PDOException;
 
 const DBHOST = 'db';
-const DBUSER = 'samuel.corchia';
-const DBPASS = 'Br6dd534';
-const DBNAME = 'monapp';
+// const DBUSER = getenv('APP_USER');
+// const DBPASS = getenv('APP_PASSWORD');
+// const DBNAME = getenv('APP_DATABASE');
 
 class Db extends PDO
 {
@@ -19,9 +19,9 @@ class Db extends PDO
 
     private function __construct()
     {
-        $dns = 'mysql:host=' . DBHOST . ';dbname=' . DBNAME;
+        $dns = 'mysql:host=' . DBHOST . ';dbname=' . getenv('APP_DATABASE');
         try{
-            parent::__construct($dns, DBUSER, DBPASS);
+            parent::__construct($dns, getenv('APP_USER'), getenv('APP_PASSWORD'));
             $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
             $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e){
