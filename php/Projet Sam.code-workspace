@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../project-docker-nginx-mysql"
+		},
+		{
+			"path": "../../annonces"
+		}
+	]
+}
