@@ -7,6 +7,9 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # Exemple pour Debian/Ubuntu
 RUN a2dismod mpm_prefork mpm_worker && a2enmod mpm_event
+
+RUN service apache2 restart
+
 # ACtiver mod_rewrite
 # RUN a2enmod rewrite$
 
